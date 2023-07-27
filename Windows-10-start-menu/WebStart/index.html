@@ -1,0 +1,191 @@
+<html lang="en"><head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WebStart - Start Page for Browsers</title>
+   <meta name="title" content="WebStart - Start Page for Browsers">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/global.css">
+   <link rel="stylesheet" href="css/layout.css">
+   <link rel="manifest" href="site.webmanifest">
+   <script src="base.js"></script>
+   <style>
+      @font-face {
+         font-family: OSans;
+         src: url("OSans.ttf");
+      }
+      /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+   </style>
+</head>
+<body onLoad="ShowDate()">
+   <main class="container bg-primary">
+      <div class="grid-container">
+         <aside class="sidebar">
+            <nav>
+               <li class="hamburger">
+                  <img class="width-small" src="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/settings-87.png" alt="hamburger button">
+               </li>
+               <ul>
+                  <li><img class="width-small" src="./Start Menu_files/contacts-icon.png" onclick="follow()"></li>
+                  <li style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</li>
+                  <li>
+                     <a href="https://github.com/arcturus10/">
+                        <img class="width-small" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
+                     </a>
+                  </li>
+               </ul>
+            </nav> 
+         </aside>
+   <script>
+      function gmail() {
+         window.open("https://mail.google.com/", "_blank","toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400")
+      }
+      function wikipedia(){
+         window.open("https://en.m.wikipedia.org","_blank","toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400")
+      }
+      function calendar(){
+         window.open("https://calendar.google.com","_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400")
+      }
+      function office(){
+         window.open("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjqx86gqZCAAxWaMN4KHREYDz4QFnoECA4QAQ&url=https%3A%2F%2Fwww.office.com%2F&usg=AOvVaw297op3g8pyu3qja2RPtXVz&opi=89978449","_blank","toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400")
+      }
+      function outlook(){
+         window.open("https://outlook.live.com/owa/","_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400")
+      }
+      function follow(){
+         window.open("https://arcturus10.github.io/Default.html","_blank")
+      }
+      function contact(){
+         //If Mobile
+         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+         window.open("tel:","_blank")}
+         else{
+         //is Desktop (currently assumed Windows)
+         //Windows URIs might not work on other devices
+         window.open("ms-people:","_blank")
+         }
+      }
+      function FileStoreActivity(){
+         window.open("storage.html","_blank", "toolbar=no,scrollbars=no,resizable=yes,top=0,left=0,width=1500,height=600")
+      }
+      function chat(){
+         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+         {
+            let api = "https://api.whatsapp.com/";
+            window.open(api,"_blank");
+         }
+         else
+         {
+         window.open("https://web.whatsapp.com/","_blank", "toolbar=no,scrollbars=no,resizable=yes,top=0,left=0,width=1500,height=600")
+         }
+      }
+   </script>
+   <script>
+      function search(){
+         const val = document.querySelector('input').value;
+         console.log(val);
+         let url = "https://google.com/search?q=";
+         let finalurl = url.concat(val);
+         window.open(finalurl, "_blank");
+      }
+   </script>
+         <!-- Main content -->
+         <header class="applications scrollbar">
+            <div id="dateview" style="font-family:OSans;font-size:medium"></div>
+            <div class="main-container">
+                <div class="box office" onclick="office()">
+                  <img class="width-large" src="./Start Menu_files/office-white.svg" alt="microsoft office">
+                  <p>Office</p>
+               </div>
+             
+
+               <div class="box bg-secondary">
+                  <input type="text" width="100%" style="border-color:dimgrey" placeholder="Type Here">
+                  <button onclick="search()" style="background-color:black;color:bisque">Search</button>
+                 <p>Google Search</p>
+             </div>
+               
+   
+               <div class="box photos bg-animation">
+                  <p>Photo Slideshow</p>
+               </div>
+
+               <div class="box bg-secondary" onclick="gmail()">
+               <img class="width-large" src="./Start Menu_files/Gmail.png" alt="Email">
+                  <p>Gmail : Private and secure email</p>
+               </div>
+
+               <div class="box bg-secondary" onclick="FileStoreActivity()">
+                  <img class="width-large" src="https://cdn.mos.cms.futurecdn.net/TRnv6YbNbTGUcKnjDaPBkg.jpg">
+                     <p>Cloud Storage & File Sharing</p>
+               </div>
+
+               <div class="box bg-secondary" onclick="outlook()">
+                  <img alt="Outlook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Microsoft_Office_Outlook_%282013%E2%80%932019%29.svg/480px-Microsoft_Office_Outlook_%282013%E2%80%932019%29.svg.png" class="width-large">
+                                    <p>Microsoft Outlook</p>
+
+                              </div>
+<div class="box bg-secondary" onclick="chat()">
+               <img alt="Outlook" src="./Start Menu_files/chat.webp" class="width-large">
+                                    <p>WhatsApp</p>
+</div>
+
+<div class="box bg-secondary" onclick="wikipedia()">
+<img class="width-large" src="./Start Menu_files/Wiki.png" alt="Wikipedia">
+                  <p>Wikipedia</p>
+               </div>
+               
+
+<div class="box bg-secondary" onclick="calendar()">
+<img alt="Google Calendar" src="./Start Menu_files/Calendar.png" class="width-large">
+                  <p>Google Calendar</p>
+               </div>
+
+<div class="box bg-secondary" onclick="contact()">
+ <img src="./Start Menu_files/contacts-icon.png" class="width-large">
+                  <p>Contacts</p>
+</div>               
+            </div>
+         </header>
+      </div>
+   </main>
+   <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<embed src="search.html" width="100%" height="100%">
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "500px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>
