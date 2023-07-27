@@ -1,0 +1,42 @@
+/* CSS reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Main style */
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: url(../images/wallpapers/bg-1.jpg) no-repeat center center/cover;
+   height: 100vh;
+   overflow: hidden;
+   color: white;
+   font-size: 0.8rem;
+}
+
+li {
+   list-style: none;
+}
+
+li, p {
+   font-size: 0.75rem;
+   cursor: default;
+}
+
+/* image/icon widths */
+img {
+   width: 100%;
+}
+
+.width-small {
+   width: 19px;
+}
+
+.width-medium {
+   width: 25px;
+}
+
+.width-large {
+   width: 37px;
+}
