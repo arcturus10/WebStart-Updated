@@ -7,7 +7,8 @@ A start menu experience, similar to the one in Windows 10, designed with HTML, C
 <li>Search directly from within the webpage!</li>
 </li>
 <h2>📃Screenshots</h2>
-![Screenshot 2023-07-28 22 45 31](https://github.com/arcturus10/WebStart-Updated/assets/136338872/c8272c58-1897-4c59-bdb0-16b599d9847d)
-![Screenshot 2023-07-28 22 44 51](https://github.com/arcturus10/WebStart-Updated/assets/136338872/d9bfb156-f2e0-445d-86f8-51704b4d66c1)
-![Screenshot 2023-07-28 23 03 01](https://github.com/arcturus10/WebStart-Updated/assets/136338872/9c24c1c3-a4d3-4fee-be2a-e36715c05616)
+<img src="https://github.com/arcturus10/WebStart-Updated/assets/136338872/d9bfb156-f2e0-445d-86f8-51704b4d66c1">
+<img src="https://github.com/arcturus10/WebStart-Updated/assets/136338872/c8272c58-1897-4c59-bdb0-16b599d9847d">
+<img src="https://github.com/arcturus10/WebStart-Updated/assets/136338872/9c24c1c3-a4d3-4fee-be2a-e36715c05616">
+
 <hr><h4>Show your support by starring this repository!</h4>
